@@ -70,7 +70,7 @@ Starting from a raw relational flight-operations database (9 interconnected tabl
 ## 🗂️ Data Model
 
 <div align="center">
-<img src="assets/data-model.png" width="850" alt="Star Schema Data Model">
+<img width="1459" height="766" alt="Screenshot 2026-07-02 111132" src="https://github.com/user-attachments/assets/5eb858e2-36e7-49a2-b4e9-137c58b84e78" />
 </div>
 
 A relationship-rich star schema: transactional tables (`flights`, `tickets`, `bookings`, `boarding_passes`, `ticket_flights`, `seats`) surround a central `airline_route_profitability` fact table carrying every cost line item, joined through a shared `calendar` dimension for consistent time intelligence — plus a standalone `Sheet1` measure table keeping all 25+ DAX formulas organized and disconnected from the model.
