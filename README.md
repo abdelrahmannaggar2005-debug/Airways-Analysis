@@ -45,12 +45,12 @@ Starting from a raw relational flight-operations database (9 interconnected tabl
 ## 🏗️ Architecture
 
 ```
-┌──────────────────┐     ┌───────────────────────┐     ┌──────────────────────┐
-│   travel.sqlite   │     │   Python / Pandas ETL   │     │   Power BI Model     │
-│  9 relational      │ ─▶ │  clean · reshape ·      │ ─▶ │  Star schema · DAX    │
-│  source tables     │     │  type-cast · export      │     │  measures · visuals   │
-└──────────────────┘     └───────────────────────┘     └──────────────────────┘
-      raw OLTP data          Jupyter Notebook                interactive report
+┌──────────────────┐           ┌───────────────────────┐     ┌──────────────────────┐
+│   travel.sqlite  │           │   Python / Pandas ETL │     │   Power BI Model     │
+│  9 relational    │ ─▶        │  clean · reshape ·    │ ─▶ │  Star schema · DAX   │
+│  source tables   │           │  type-cast · export   │     │  measures · visuals  │
+└──────────────────┘           └───────────────────────┘     └──────────────────────┘
+      raw OLTP data                Jupyter Notebook             interactive report
 ```
 
 **Pipeline stages:**
@@ -122,17 +122,7 @@ A sample of the measures powering the report — organized by category:
 
 <br>
 
-## 📊 Dashboard Preview
 
-<div align="center">
-<img src="assets/dashboard-routes.png" width="850" alt="Route Profitability Table">
-<br><i>Route-level profitability — revenue, cost, and margin side by side</i>
-<br><br>
-<img src="assets/dashboard-filtered.png" width="850" alt="Filtered Dashboard View">
-<br><i>Drill-down view filtered by route category and season</i>
-</div>
-
-<br>
 
 ## 🛠️ Tech Stack
 
